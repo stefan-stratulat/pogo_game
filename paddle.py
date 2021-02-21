@@ -2,13 +2,19 @@ from turtle import Turtle
 
 class Paddle(Turtle):
 
-    def __init__(self):
+    def __init__(self,x_pos,y_pos):
         super().__init__()
+        self.x_pos = x_pos
+        self.y_pos = y_pos
+        self.create_paddle(x_pos,y_pos)
+
+    def create_paddle(self, x, y):
         self.shape('square')
         self.color('white')
         self.penup()
         self.shapesize(stretch_wid=5,stretch_len=1)
-        self.goto(350,0)
+        self.goto(x,y)
+
 
     #update paddle to go up (key UP)
     def up(self):
