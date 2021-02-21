@@ -1,6 +1,7 @@
 from turtle import Screen
 from paddle import Paddle
 from ball import Ball
+from scoreboard import Scoreboard
 import time
 
 #screen details
@@ -14,6 +15,7 @@ screen.tracer(0)
 r_paddle = Paddle(350,0)
 l_paddle = Paddle(-350,0)
 ball = Ball()
+scoreboard = Scoreboard()
 
 
 # paddle key commands
