@@ -35,13 +35,15 @@ class Paddle():
             new_y = self.paddle_segments[seg_num-1].ycor()
             self.paddle_segments[seg_num].goto(new_x,new_y)
 
-        #self.snake_head.forward(MOVE_DISTANCE)
+        self.snake_head.forward(MOVE_DISTANCE)
 
     def up(self):
         #if self.snake_head.heading() != DOWN:
         self.snake_head.setheading(UP)
+        self.move()
 
     def down(self):
         #if self.snake_head.heading() != UP:
         self.snake_head.setheading(DOWN)
+        self.move()
 
