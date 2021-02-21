@@ -8,13 +8,15 @@ screen.setup(width = 800, height = 600)
 screen.title("Fun With POGO")
 screen.tracer(0)
 
-paddle = Paddle()
+r_paddle = Paddle(350,0)
+l_paddle = Paddle(-350,0)
 
 # paddle key commands
 screen.listen()
-screen.onkey(paddle.up, "Up")
-screen.onkey(paddle.down, "Down")
-
+screen.onkey(r_paddle.up, "Up")
+screen.onkey(r_paddle.down, "Down")
+screen.onkey(l_paddle.up,"w")
+screen.onkey(l_paddle.down,"s")
 
 game_is_on = True
 
